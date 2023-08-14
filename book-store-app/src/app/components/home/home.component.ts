@@ -28,8 +28,14 @@ export class HomeComponent implements OnInit{
     )
   }
 
-  public getBooks(): BookModel[] {
-    this.bookService.getAllBooks()
+  public getBooks(id: number) {
+    console.log(id); // getting the id from event binding
+
+    this.bookService.getBooksByGenre(id).subscribe(
+      data => {
+        this.books = data;
+      }
+    )
   }
 
 }

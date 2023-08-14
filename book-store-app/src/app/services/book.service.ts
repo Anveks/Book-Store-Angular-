@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { BookModel } from "../models/book-model";
 import { HttpClient } from '@angular/common/http';
-import { Observable } from "rxjs";
+import { Observable, map } from "rxjs";
 import { GenreModel } from "../models/genre-model";
 
 @Injectable({
@@ -17,7 +17,12 @@ export class BookService  {
     return this.http.get<GenreModel[]>(this.dataPath + 'genres.json');
   }
 
-  public getAllBooks(): Observable<BookModel[]> {
-    return this.http.get<BookModel[]>(this.dataPath + 'books.json');
+  public getBooksByGenre(id: number): Observable<BookModel[]> {
+    const books = this.http.get<BookModel[]>(this.dataPath + 'books.json');
+
+    const booksByGenre = books.pipe( // RzJS pipe creates a pipeline of operations on the observable
+      map(books => books.filter((b) => b.genreId === id)) // map operator returns a new array with filtered books
+    )
+    return booksByGenre;
   }
 }

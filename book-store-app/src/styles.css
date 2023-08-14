@@ -2,3 +2,26 @@
 * {
   font-family: sans-serif;
 }
+
+h3 {
+  text-align: center;
+}
+
+
+.genre-section {
+  background-color: lightblue;
+  width: 10rem;
+  padding: 1rem;
+  margin: .5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.genre-section:hover {
+  background-color: lightskyblue;
+}
+
+.books-cont {
+  background-color: lightgray;
+  width: 2rem;
+}

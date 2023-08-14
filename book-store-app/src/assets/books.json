@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A story of wealth, love, and tragedy set in the Roaring Twenties.",
+    "price": 12.99,
+    "genreId": 1
+  },
+  {
+    "id": 2,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A powerful story of racial injustice and moral growth.",
+    "price": 10.99,
+    "genreId": 1
+  },
+  {
+    "id": 3,
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "description": "A psychological thriller that explores the complexities of marriage.",
+    "price": 11.49,
+    "genreId": 2
+  },
+  {
+    "id": 4,
+    "title": "The Girl on the Train",
+    "author": "Paula Hawkins",
+    "description": "A gripping mystery centered around a missing woman.",
+    "price": 9.99,
+    "genreId": 2
+  },
+  {
+    "id": 5,
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "description": "A science fiction epic set on a desert planet with political intrigue and adventure.",
+    "price": 14.99,
+    "genreId": 3
+  },
+  {
+    "id": 6,
+    "title": "Ender's Game",
+    "author": "Orson Scott Card",
+    "description": "A story of a young boy's journey to become a military commander in a futuristic world.",
+    "price": 8.99,
+    "genreId": 3
+  },
+  {
+    "id": 7,
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel depicting a totalitarian society under surveillance.",
+    "price": 10.99,
+    "genreId": 1
+  },
+  {
+    "id": 8,
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "description": "A fast-paced thriller involving a conspiracy surrounding a religious mystery.",
+    "price": 11.99,
+    "genreId": 2
+  },
+  {
+    "id": 9,
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "description": "A dystopian tale of survival in a deadly competition.",
+    "price": 9.49,
+    "genreId": 1
+  },
+  {
+    "id": 10,
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "description": "A novel exploring a futuristic society built on technology and conformity.",
+    "price": 9.99,
+    "genreId": 3
+  }
+]

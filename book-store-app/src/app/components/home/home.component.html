@@ -1,7 +1,23 @@
 
 <div class="home">
-  <section class="genre-section" *ngFor="let g of genres" (click)="getBooks(g.id)">{{g.name}}</section>
+  <!-- list of genres -->
+  <div class="genres-cont">
+      <nav class="genre-section" *ngFor="let g of genres" (click)="getBooks(g.id)">{{g.name}}</nav>
+  </div>
 
-  <div class="books-cont">placeholder</div>
+  <!-- in case the books arr is empty: -->
+  <ng-container *ngIf="books.length === 0; else booksList">
+    <div class="no-books-message">Select a genre please.</div>
+  </ng-container>
+
+  <!-- list of books -->
+  <ng-template #booksList>
+    <div class="books-cont">
+      <app-card class="book-card" *ngFor="let b of books" [book]="b" (click)="onCardClick($event)"></app-card>
+    </div>
+  </ng-template>
+
 </div>
+
+<!-- (click)="showDetails()" -->
 

@@ -3,10 +3,18 @@
   font-family: sans-serif;
 }
 
+.home {
+  display: flex;
+  gap: 0;
+}
+
 h3 {
   text-align: center;
 }
 
+.genres-cont {
+  flex: 1;
+}
 
 .genre-section {
   background-color: lightblue;
@@ -19,9 +27,31 @@ h3 {
 
 .genre-section:hover {
   background-color: lightskyblue;
+  transition: .15s;
 }
 
 .books-cont {
+  flex: 2;
   background-color: lightgray;
-  width: 2rem;
+
+  display: flex;
+}
+
+.book-card {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.book-card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.book-author {
+  font-style: italic;
+  font-weight: normal;
+  color: gray;
 }

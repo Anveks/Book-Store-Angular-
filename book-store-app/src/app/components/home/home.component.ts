@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { BookModel } from 'src/app/models/book-model';
 import { GenreModel } from 'src/app/models/genre-model';
 import { BookService } from 'src/app/services/book.service';
@@ -11,7 +11,9 @@ import { BookService } from 'src/app/services/book.service';
 
 export class HomeComponent implements OnInit{
 
-  genres: GenreModel[] = []
+  @Output() cardClick = new EventEmitter<Event>();
+
+  genres: GenreModel[] = [];
 
   books: BookModel[] = [];
 
@@ -34,8 +36,13 @@ export class HomeComponent implements OnInit{
     this.bookService.getBooksByGenre(id).subscribe(
       data => {
         this.books = data;
+        console.log(data);
       }
     )
+  }
+
+  public onCardClick(event: any) {
+    this.cardClick.emit(event); // Emit the event when the card is clicked
   }
 
 }
